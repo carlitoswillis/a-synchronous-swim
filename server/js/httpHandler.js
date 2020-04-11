@@ -13,7 +13,21 @@ module.exports.initialize = (queue) => {
 };
 
 module.exports.router = (req, res, next = ()=>{}) => {
+
   console.log('Serving request type ' + req.method + ' for url ' + req.url);
+
+  if (req.method === "GET") {
+    // send back a random swim command
+    console.log('this is totally working');
+    res.writeHead(200, headers);
+    res.write('this is a response test?');
+    res.end();
+  } else {
+    // all the rest for now
+    console.log('this is kind of working');
+    res.writeHead(200, headers);
+    res.end();
+  }
   res.writeHead(200, headers);
   res.end();
   next(); // invoke next() at the end of a request to help with testing!

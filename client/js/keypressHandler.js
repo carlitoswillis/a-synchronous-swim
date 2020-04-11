@@ -1,4 +1,6 @@
 
+
+
 $('body').on('keydown', (event) => {
   var arrowPress = event.key.match(/Arrow(Up|Down|Left|Right)/);
   if (arrowPress) {
@@ -6,5 +8,13 @@ $('body').on('keydown', (event) => {
     SwimTeam.move(direction.toLowerCase());
   }
 });
+
+
+
+
+
+
+
+
 
 console.log('Client is running in the browser!');

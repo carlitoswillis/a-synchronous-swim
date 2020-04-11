@@ -2,8 +2,36 @@
 
   const serverUrl = 'http://127.0.0.1:3000';
 
-  //
   // TODO: build the swim command fetcher here
+
+
+  // var settings = {
+  //   "url": "http://127.0.0.1:3000",
+  //   "method": "GET",
+  //   "timeout": 0,
+  //   "success": function (response) {
+  //     console.log(response);
+
+  //   }
+  // };
+
+  // $.ajax(settings).done(function (response) {
+  //   console.log(response);
+  // });
+
+
+  var requestOptions = {
+    method: 'GET',
+    redirect: 'follow'
+  };
+
+  fetch("http://127.0.0.1:3000", requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
+
+
+  console.log('fetched!');
   //
 
   /////////////////////////////////////////////////////////////////////
