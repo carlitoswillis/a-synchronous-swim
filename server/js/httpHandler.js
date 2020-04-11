@@ -19,9 +19,18 @@ module.exports.router = (req, res, next = ()=>{}) => {
   if (req.method === "GET") {
     // send back a random swim command
     console.log('this is totally working');
+
     res.writeHead(200, headers);
-    res.write('this is a response test?');
+
+    var randomMoves = function () {
+      var choices = ['left', 'right', 'up', 'down'];
+      var direction = choices[Math.floor(Math.random() * 4)];
+      return direction;
+    }
+
+    res.write(randomMoves());
     res.end();
+
   } else {
     // all the rest for now
     console.log('this is kind of working');

@@ -30,7 +30,7 @@ describe('server responses', () => {
     expect(res._responseCode).to.equal(200); // ok
     expect(res._ended).to.equal(true); // severs the connection
 
-    expect(res._data.toString()).to.not.equal('');
+    // expect(res._data.toString()).to.not.equal('');
     expect(res._data.toString()).to.be.in(['up', 'down', 'left', 'right']);
 
     // expect(['up', 'down', 'left', 'right']).to.be.toContain(res._data.toString());
