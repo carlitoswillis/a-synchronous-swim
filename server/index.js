@@ -1,10 +1,18 @@
 
+var sendMove = function (message) {
+  console.log(`Message received: ${message}`);
+  // messages.push(message);
+  // httpHandler.
+  return message;
+};
 
 
 const keypressHandler = require('./js/keypressHandler');
-keypressHandler.initialize(message => console.log(`Message received: ${message}`));
+keypressHandler.initialize(sendMove);
 
 const httpHandler = require('./js/httpHandler');
+
+
 
 
 const http = require('http');

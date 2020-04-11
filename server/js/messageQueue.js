@@ -1,3 +1,5 @@
+
+// carlitos' idea - server key presses get added into this
 const messages = []; // the storage unit for messages
 
 module.exports.enqueue = (message) => {

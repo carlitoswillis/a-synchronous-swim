@@ -19,6 +19,9 @@
   //   console.log(response);
   // });
 
+  // setInterval( , 500);
+
+  // var
 
   var requestOptions = {
     method: 'GET',
@@ -27,7 +30,8 @@
 
   fetch("http://127.0.0.1:3000", requestOptions)
     .then(response => response.text())
-    .then(result => console.log(result))
+    .then(result =>
+      SwimTeam.move(result.toLowerCase()))
     .catch(error => console.log('error', error));
 
 
